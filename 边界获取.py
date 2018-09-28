@@ -1,6 +1,7 @@
+# https://lbs.amap.com/api/webservice/guide/api/district
 import pandas as pd
 import requests
-r =requests.get("https://restapi.amap.com/v3/config/district?keywords=山东&subdistrict=0&key=你的密钥&extensions=all")
+r =requests.get("https://restapi.amap.com/v3/config/district?keywords=山东&subdistrict=3&key=你的密钥&extensions=all")
 s=r.json()
 poly=s["districts"][0]["polyline"]
 p=poly.split("|")
